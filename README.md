@@ -1,7 +1,7 @@
 # SIFT : Team 12
 # Members
 Project Manager: [Name] ([GitHub Name])\
-Communications Lead: [Name] ([GitHub Name])\
+Communications Lead: John Ramirez (Static176)\
 Git Master: [Name] ([GitHub Name])\
 Design Lead: Morgan Solis (msoli11)\
 Quality Assurance Tester: [Name] ([GitHub Name])
