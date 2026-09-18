@@ -1,4 +1,4 @@
-# [Name of the Project] : 12
+# SIFT : Team 12
 # Members
 Project Manager: [Name] ([GitHub Name])\
 Communications Lead: [Name] ([GitHub Name])\
