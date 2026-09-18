@@ -1,9 +1,9 @@
-# [Name of the Project] : [Team Number]
+# [Name of the Project] : 12
 # Members
 Project Manager: [Name] ([GitHub Name])\
 Communications Lead: [Name] ([GitHub Name])\
 Git Master: [Name] ([GitHub Name])\
-Design Lead: [Name] ([GitHub Name])\
+Design Lead: Morgan Solis (msoli11)\
 Quality Assurance Tester: [Name] ([GitHub Name])
 
 # About Our Software
