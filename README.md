@@ -2,7 +2,7 @@
 # Members
 Project Manager: Sam Adler (Aucious1)\
 Communications Lead: John Ramirez (Static176)\
-Git Master: [Name] ([GitHub Name])\
+Git Master: Aditya Baisakh (AdityaB2007)\
 Design Lead: Morgan Solis (msoli11)\
 Quality Assurance Tester: [Name] ([GitHub Name])
 
