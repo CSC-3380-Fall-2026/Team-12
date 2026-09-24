@@ -8,7 +8,12 @@ Quality Assurance Tester: [Name] ([GitHub Name])
 
 # About Our Software
 
-Describe a little about what the project is about here.
+<b>SIFT</b> is a web-based note-taking application that brings text and images together
+in a single organized workspace. Users can create and edit notes, upload and annotate images,
+extract text data, and connect related content to make their information easier to search,
+organize, and navigate. Our ultimate goal is to make note-taking a more visual, connected,
+and efficient experience rather as opposed to a painful and mundane activity.
+
 ## Platforms Tested on
 - MacOS
 - Android
@@ -16,7 +21,7 @@ Describe a little about what the project is about here.
 - Linux
 - Windows
 # Important Links
-Kanban Board: [link]\
+Kanban Board: https://github.com/orgs/CSC-3380-Fall-2026/projects/9 \
 Designs: [link]\
 Styles Guide(s): [link]
 
