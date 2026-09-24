@@ -1,55 +1,75 @@
-# SIFT : Team 12
-# Members
-Project Manager: Sam Adler (Aucious1)\
-Communications Lead: John Ramirez (Static176)\
-Git Master: Aditya Baisakh (AdityaB2007)\
-Design Lead: Morgan Solis (msoli11)\
-Quality Assurance Tester: [Name] ([GitHub Name])
+# React + TypeScript + Vite
 
-# About Our Software
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Describe a little about what the project is about here.
-## Platforms Tested on
-- MacOS
-- Android
-- iOS
-- Linux
-- Windows
-# Important Links
-Kanban Board: [link]\
-Designs: [link]\
-Styles Guide(s): [link]
+Currently, two official plugins are available:
 
-# How to Run Dev and Test Environment
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## Dependencies
-- List all dependencies here
-- Don't forget to include versions
-### Downloading Dependencies
-Describe where to download the dependencies here. Some will likely require a web download. Provide links here. For IDE extensions, make sure your project works with the free version of them, and detail which IDE(s) these are available in. 
+## React Compiler
 
-## Commands
-Describe how the commands and process to launch the project on the main branch in such a way that anyone working on the project knows how to check the affects of any code they add.
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-```sh
-Example terminal command syntax
+## Expanding the ESLint configuration
+
+If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+
+```js
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
+
+      // Remove tseslint.configs.recommended and replace with this
+      tseslint.configs.recommendedTypeChecked,
+      // Alternatively, use this for stricter rules
+      tseslint.configs.strictTypeChecked,
+      // Optionally, add this for stylistic rules
+      tseslint.configs.stylisticTypeChecked,
+
+      // Other configs...
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
+
 ```
 
-It is very common in these sections to see code in peculiar boxes to help them stand out. Check the markdown section of the Project Specifications to see how to add more / customize these.
+You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
 
-```python
-def code_highlight_example(m: int, m: float, s: str) -> str:
-	return s + str(n*m)
-```
+```js
+// eslint.config.js
+import reactX from 'eslint-plugin-react-x'
+import reactDom from 'eslint-plugin-react-dom'
 
-```java
-public static void main(String[] args){
-	System.out.println("Hello, World!");
-}
-```
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
+      // Enable lint rules for React
+      reactX.configs['recommended-typescript'],
+      // Enable lint rules for React DOM
+      reactDom.configs.recommended,
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
 
-```c#
-static void Main(){
-	Console.WriteLine("Hello, World!");
-}
 ```
